@@ -7,27 +7,17 @@ import {
   Alert,
 } from "react-native";
 import React from "react";
+import booksData from "../data/books.json";
 
-const DATA = [
-  {
-    id: "bd7acbea-c1b1-46c2-aed5-3ad53abb28ba",
-    title: "The Great Gatsby",
-    author: "F. Scott Fitzgerald",
-    progress: 65, // Progress percentage (0-100)
-  },
-  {
-    id: "3ac68afc-c605-48d3-a4f8-fbd91aa97f63",
-    title: "To Kill a Mockingbird",
-    author: "Harper Lee",
-    progress: 30,
-  },
-  {
-    id: "58694a0f-3da1-471f-bd96-145571e29d72",
-    title: "1984",
-    author: "George Orwell",
-    progress: 10,
-  },
-];
+// Define type for the book data
+type Book = {
+  id: string;
+  title: string;
+  author: string;
+  progress: number;
+};
+
+const DATA: Book[] = booksData;
 
 type ItemProps = {
   title: string;
